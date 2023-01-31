@@ -63,25 +63,6 @@ color: red;
     flex-direction: column;
     margin-top: 0px;
     flex-grow: 1;
-    .list-menu-item {
-        display: flex;
-        align-items: center;
-        padding: 10px 15px;
-        border-radius: 5px;
-
-        width: 100%;
-        color: #5f5f5f;
-        margin-bottom: 5px;
-        &:hover {
-            background: $light;
-        }
-
-        &.is-active {
-            background-color: #cff8ef;
-            color: $dark-green;
-        }
-        
-    }
 }
 
 
@@ -103,12 +84,14 @@ color: red;
        width:  100%;
        border-top-left-radius: 0px;
        border-bottom-left-radius: 0px;
+       margin-bottom: 10px;
     }
     
     .task-list-container {
+   
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
-        height: 100%;
+      
     }
     
 }
