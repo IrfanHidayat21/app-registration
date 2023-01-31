@@ -22,7 +22,7 @@ export class SignupPageComponent implements OnInit {
   onSignupButtonClicked(nama:string, alamat:string, jenisKlaim:string, nik: string, noHp:string, penghasilan:number, email: string, password: string) {
     this.loadBtn = 0;
     this.errorMsg = null;
-    const status = 'Dalam Proses';
+    const status = 'diproses';
     console.log(nama, alamat, jenisKlaim, nik, noHp, penghasilan, email, password, status);
     this.authService.signup(nama, alamat, jenisKlaim, nik, noHp, penghasilan, email, password, status).subscribe((res: HttpResponse<any>) => {
       if (res.status === 200) {
