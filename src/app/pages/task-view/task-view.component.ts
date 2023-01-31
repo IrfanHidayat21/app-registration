@@ -38,8 +38,13 @@ export class TaskViewComponent implements OnInit {
 
   ngOnInit() {
     this.load2 = 0;
-     this.users  = localStorage.getItem('user');
-     this.users = JSON.parse(this.users);
+    if (localStorage.getItem('user') === null) {
+      this.logout();
+    } else {
+      this.users  = localStorage.getItem('user');
+      this.users = JSON.parse(this.users);
+    }
+
   }
 
 

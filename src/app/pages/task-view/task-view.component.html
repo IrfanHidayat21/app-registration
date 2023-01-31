@@ -1,70 +1,82 @@
 <div id="main" class="centered-content">
-    <div class="task-manager-container">
-            <div class="sidebar has-background-white">
-              <div class="top-bar has-background-white mb-4">
-                <h1 class="title has-text-primary">
-                    PROFILE USER
-                </h1>
-                <p class="text-deskripsi">Selamat Anda telah terdaftar dalam pengajuan klaim asuransi. Mohon menunggu proses pengecekkan data Anda dalam 3 x 24 jam !</p>
-            </div>
-      
-                <div class="list-menu">
-                  <div>
-                    <label class="mb-1" for="">Nama</label>
-                    <input readonly #namaInput type="text" [value]="users.nama" class="input has-background-light is-medium mb-3" placeholder="Nama Lengkap..">
-                  </div>
-                  <div>
-                    <label class="mb-1" for="">NIK</label>
-                    <input readonly #nikInput type="text" [value]="users.nik" class="input has-background-light is-medium mb-3" placeholder="NIK..">
-                  </div>
-                  <div>
-                    <label class="mb-1" for="">Alamat</label>
-                    <textarea readonly #alamatInput type="text" [value]="users.alamat" class="input has-background-light is-medium mb-3" placeholder="Alamat.."></textarea>
-                  </div>
-                  <div>
-                    <label class="mb-1" for="">No. Hp</label>                 
-                    <input readonly #noHpInput type="tel" [value]="users.noHp" class="input has-background-light is-medium mb-3" placeholder="Nomor Hp..">
-                  </div>
-                </div>
-              
-            </div>
+  <div class="task-manager-container">
+    <div class="sidebar has-background-white">
+      <div class="top-bar has-background-white mb-4">
+        <h1 class="title has-text-primary">
+          PROFILE USER
+        </h1>
+        <p class="text-deskripsi">Selamat Anda telah terdaftar dalam pengajuan klaim asuransi. Mohon menunggu proses
+          pengecekkan data Anda dalam 3 x 24 jam !</p>
+      </div>
 
-            <!-- DATA PROFILE -->
-            <div class="task-list-container has-background-white" *ngIf="showProfile === 0">
-              <div class="container-task">
-                <div class="top-bar has-background-white mb-4">
-                  <!-- <h1 class="title has-text-primary">
+      <div class="list-menu">
+        <div>
+          <label class="mb-1" for="">Nama</label>
+          <input readonly #namaInput type="text" [value]="users.nama" class="input has-background-light is-medium mb-3"
+            placeholder="Nama Lengkap..">
+        </div>
+        <div>
+          <label class="mb-1" for="">NIK</label>
+          <input readonly #nikInput type="text" [value]="users.nik" class="input has-background-light is-medium mb-3"
+            placeholder="NIK..">
+        </div>
+        <div>
+          <label class="mb-1" for="">Alamat</label>
+          <textarea readonly #alamatInput type="text" [value]="users.alamat"
+            class="input has-background-light is-medium mb-3" placeholder="Alamat.."></textarea>
+        </div>
+        <div>
+          <label class="mb-1" for="">No. Hp</label>
+          <input readonly #noHpInput type="tel" [value]="users.noHp" class="input has-background-light is-medium mb-3"
+            placeholder="Nomor Hp..">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DATA PROFILE -->
+    <div class="task-list-container has-background-white" *ngIf="showProfile === 0">
+      <div class="container-task">
+        <div class="top-bar has-background-white mb-4">
+          <!-- <h1 class="title has-text-primary">
                       PROFILE USER
                   </h1> -->
-                
-              </div>
-                    <div class="mt-5">
-                      <label class="mb-1" for="">Jenis Klaim</label>
-                      <input readonly #jenisKlaimInput type="text" [value]="users.jenisKlaim" class="input has-background-light is-medium mb-3" placeholder="Jenis Klaim..">
-                    </div>
-                    <div>
-                      <label class="mb-1" for="">Penghasilan</label>
-                      <textarea readonly #penghasilanInput type="number" [value]="users.penghasilan" class="input has-background-light is-medium mb-3" placeholder="Penghasilan."></textarea>
-                    </div>
-                    <div>
-                      <label class="mb-1" for="">Email</label>                 
-                      <input readonly #emailInput type="email" [value]="users.email" class="input has-background-light is-medium mb-3" placeholder="Email..">
-                    </div>
-                    <div>
-                      <label class="mb-1" for="">Status</label>
-                      <input readonly #statusInput type="text" [value]="users.status" class="input has-background-light is-medium mb-3" placeholder="Status..">
-                    </div>
- 
-                  <div class="lds-ripple" *ngIf="loadProfile === 0"><div></div><div></div></div>
-                                  <button  [disabled]="loadBtnLog === 0" class="button is-danger has-text-white mt-2" (click)="logout()">
-                  <div *ngIf="loadBtnLog === 1">Log Out</div> 
-                  <i class="fa fa-spinner fa-spin" *ngIf="loadBtnLog === 0"></i>
-                </button>
-                <div>
-                  <p class="has-text-primary has-text-centered mt-2">Web version {{webVersion}}</p>
-                </div>
-            </div>
 
-            </div>
+        </div>
+        <div class="mt-5">
+          <label class="mb-1" for="">Jenis Klaim</label>
+          <input readonly #jenisKlaimInput type="text" [value]="users.jenisKlaim"
+            class="input has-background-light is-medium mb-3" placeholder="Jenis Klaim..">
+        </div>
+        <div>
+          <label class="mb-1" for="">Penghasilan</label>
+          <textarea readonly #penghasilanInput type="number" [value]="users.penghasilan"
+            class="input has-background-light is-medium mb-3" placeholder="Penghasilan."></textarea>
+        </div>
+        <div>
+          <label class="mb-1" for="">Email</label>
+          <input readonly #emailInput type="email" [value]="users.email"
+            class="input has-background-light is-medium mb-3" placeholder="Email..">
+        </div>
+        <div>
+          <label class="mb-1" for="">Status</label>
+          <input readonly #statusInput type="text" [value]="users.status"
+            class="input has-background-light is-medium mb-3" placeholder="Status..">
+        </div>
+
+        <div class="lds-ripple" *ngIf="loadProfile === 0">
+          <div></div>
+          <div></div>
+        </div>
+        <button [disabled]="loadBtnLog === 0" class="button is-danger has-text-white mt-2" (click)="logout()">
+          <div *ngIf="loadBtnLog === 1">Log Out</div>
+          <i class="fa fa-spinner fa-spin" *ngIf="loadBtnLog === 0"></i>
+        </button>
+        <div>
+          <p class="has-text-primary has-text-centered mt-2">Web version {{webVersion}}</p>
+        </div>
+      </div>
+
     </div>
+  </div>
 </div>

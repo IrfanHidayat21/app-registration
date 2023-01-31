@@ -15,10 +15,6 @@ color: red;
     transition: background-color .5s;
 }
 
-.sidenav {
-    display: none;
-}
-
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -51,8 +47,6 @@ color: red;
             flex-grow: 1;
         }
     }
-
-
 
 }
 
@@ -90,73 +84,6 @@ color: red;
     }
 }
 
-.task {
-    display: flex;
-    background: white;
-    padding: 15px 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    align-items: center;
-
-    &:not(.complete) {
-    cursor: pointer;
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-
-    &:active {
-        transform: scale(0.95);
-    }
-
-    &:hover {
-        box-shadow: 0 0 0 5px #eeeeee;
-        .task-buttons {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-    }
-    &.completed .task-text {
-        text-decoration: line-through;
-        opacity: 0.8;
-    }
-
-
-    .task-text {
-        display: block;
-        flex-grow: 1;
-    }
-
-    .task-buttons {
-        transition: opacity 0.2s, transform 0.2s;
-        opacity: 0;
-        transform: scale(0.85);
-    }
-}
-
-.circle-add-button {
-    height: 50px;
-    width: 50px;
-    font-size: 25px;
-    position: absolute;
-    bottom: 25px;
-    right: 45px;
-    float: right !important;
-    border-radius: 50%;
-}
-
-.empty-text-state {
-    font-size: 20px;
-    color: #999;
-    text-align: center;
-}
-
-.button-bars {
-    display: none;
-
-}
-
-.btn-delete {
-    margin-left: 10px;
-}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -168,21 +95,12 @@ color: red;
         display: block;
     }
 
-    .title-sidemenu {
-       font-weight: bold;
-        margin-top: 3px;
-    }
+
 
     .sidebar {
        display: block;
-
        flex-direction: column;
-
        width:  100%;
-       background: white;
-   
-       padding: 42px;
-   
        border-top-left-radius: 0px;
        border-bottom-left-radius: 0px;
     }
@@ -192,107 +110,9 @@ color: red;
         border-bottom-right-radius: 0px;
         height: 100%;
     }
-
-    .button-bars {
-        display: block;
-        position: relative;
-        top: 15px !important;
-        margin-left: 15px;
-    }
-
-    .sidenav {
-        display: block;
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #fff;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-
-      }
-      
-      .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-      }
-      
-      .sidenav a:hover {
-        color: #f1f1f1;
-      }
-      
-      .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-      }
-
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-
-    .sidemenu-footer {
-        position: absolute;
-        display: block;
-        width: 70%;
-        bottom: 25px;
-        left: 40px;
-
-    }
-    .btn-edit {
-        margin-bottom: 5px;
-    }
-
-    .btn-delete {
-        margin-left: 0;
-    }
     
 }
   
-  .lds-facebook {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-facebook div {
-    position: absolute;
-
-    width: 16px;
-    margin:20% 90%;
-    background: turquoise;
-    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-  }
-  .lds-facebook div:nth-child(1) {
-    left: 8px;
-    animation-delay: -0.24s;
-  }
-  .lds-facebook div:nth-child(2) {
-    left: 32px;
-    animation-delay: -0.12s;
-  }
-  .lds-facebook div:nth-child(3) {
-    left: 56px;
-    animation-delay: 0;
-  }
-  @keyframes lds-facebook {
-    0% {
-      top: 8px;
-      height: 64px;
-    }
-    50%, 100% {
-      top: 24px;
-      height: 32px;
-    }
-  }
   
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
